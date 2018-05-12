@@ -20,12 +20,12 @@ path="/data/$user"
 useradd -m -d $path -G www-data -s /bin/bash $user
 mkdir -m 0700 $path/.ssh
 ssh-keygen -f $path/.ssh/id_rsa -C "$user-upstream" -N ""
+cat $path/.ssh/id_rsa.pub >>$path/.ssh/authorized_keys
 chown -R $user $path/.ssh
 
 echo
 echo "Now paste this key into Circle CI, project configuration, SSH Permissions page:"
 cat $path/.ssh/id_rsa
-cat $path/.ssh/id_rsa.pub >>$path/.ssh/authorized_keys
 
 echo
 echo "Then paste this key into Bitbucket Access keys page for your repository:"
