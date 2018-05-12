@@ -11,7 +11,7 @@ if [ "$PORT" = "" ]; then
 fi
 
 if [ "$USER" = "" ]; then
-	USER="circle"
+	USER="circleci"
 	echo "using default user \"$USER\" (variable USER not set)"
 fi
 
