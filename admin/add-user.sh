@@ -20,7 +20,7 @@ path="/data/$user"
 useradd -m -d $path -G www-data -s /bin/bash $user
 mkdir -m 0700 $path/.ssh
 chown $user $path/.ssh
-ssh-keygen -f $path/.ssh/id_rsa_circle -C "$user-upstream"
+ssh-keygen -f $path/.ssh/id_rsa_circle -C "$user-upstream" -N ""
 
 echo "Now paste this key into Circle CI, project configuration, SSH Permissions page:"
 cat $path/.ssh/id_rsa_circle
