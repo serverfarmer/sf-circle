@@ -1,7 +1,8 @@
-sf-circle extension provides support scripts to use Circle CI (or
-similar external CI service) to execute full-scale CI/CD processes
-(note that all application-side code is not open sourced for now).
+## Deprecated
 
-If you're looking for something more simple, you can also look at
-sf-app-deploy extension, which is a minimalistic, and fully open
-sourced approach to CI/CD processes.
+This repository contains old, deprecated extension to Server Farmer.
+
+It was a demonstration repository, showing how to build and deploy application projects using CircleCI, in continuous integration model. It was originally written as drop-in replacement for Jenkins.
+It stopped working in 2020, when CircleCI shut down its API v1.1:
+
+https://circleci.com/blog/a-deprecation-notice-on-job-triggering-with-api-v1-1/
